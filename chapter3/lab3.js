@@ -20,6 +20,11 @@ let pipeline = [
       _id: '$name',
       count: { $sum: 1 }
     }
+  },
+  {
+    $sort: {
+      count: -1
+    }
   }
 ];
 
